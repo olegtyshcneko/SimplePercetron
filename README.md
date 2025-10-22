@@ -30,6 +30,7 @@ The perceptron learning algorithm works as follows:
 
 - `perceptron.py` - Main Perceptron class implementation
 - `example.py` - Demonstration examples (AND gate, OR gate, 2D classification)
+- `test_perceptron.py` - Comprehensive unit tests for two-group classification
 - `README.md` - This file
 
 ## Usage
@@ -67,6 +68,44 @@ This will run several examples:
 2. OR gate classification
 3. 2D linearly separable data
 4. Manual step-by-step demonstration
+
+### Running Tests
+
+```bash
+python test_perceptron.py
+```
+
+The test suite includes 19 comprehensive tests covering:
+
+**Two-Group Classification Tests:**
+- Horizontal separation (groups separated by x-axis)
+- Vertical separation (groups separated by y-axis)
+- Diagonal separation (groups in opposite corners)
+- Clustered groups (well-separated clusters)
+
+**Logical Gate Tests:**
+- AND gate
+- OR gate
+- NAND gate
+
+**Basic Functionality Tests:**
+- Method chaining (fit returns self)
+- Error handling (predict before fit)
+- Weight initialization
+- Reproducibility with random seed
+- Accuracy scoring
+
+**Edge Cases:**
+- Single feature classification
+- Three-dimensional features
+- All samples same label
+- Minimal dataset (2 samples)
+
+**Prediction Consistency:**
+- Accuracy on training data
+- Generalization to new data
+
+All tests use only Python's built-in `unittest` module.
 
 ## Class API
 
